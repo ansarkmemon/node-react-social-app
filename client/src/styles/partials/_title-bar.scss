@@ -1,0 +1,36 @@
+.ui.container.titlebar__container {
+  background: $dark-background;
+  padding: 20px 20px 15px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 10px 11px -7px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.ui.image.titlebar__user-image {
+  height: 35px;
+}
+
+.ui.titlebar__title {
+  margin: 0;
+  color: #FFF;
+  text-transform: capitalize;
+}
+
+.ui.feed.post__container-header {
+  position: relative;
+}
+
+.bookmark.outline.icon.bookmark-icon,
+.bookmark.icon.bookmark-icon {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}

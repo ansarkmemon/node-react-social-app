@@ -1,0 +1,53 @@
+.sidebar__container.ui.wide.right.sidebar {
+  width: 250px;
+  background: $dark-background;
+}
+
+.sidebar__wrapper {
+  position: relative;
+  // width: 100vw;
+  // height: 100vh;
+  // top: 0;
+  // left: 0;
+  z-index: 10;
+}
+
+.sidebar__overlay {
+  z-index: 10;
+  position: absolute;
+  background: blue;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.sidebar__profile-card {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: darken($dark-background, 5%);
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+.ui.image.sidebar__profile-image {
+  height: 35px;
+}
+
+.sidebar__profile-meta {
+  margin-left: 15px;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h3.ui.header {
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: transparentize(#fff, 0.5);
+  }
+}

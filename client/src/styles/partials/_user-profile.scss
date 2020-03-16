@@ -1,0 +1,42 @@
+.user-profile__details {
+  display: flex;
+  align-items: center;
+}
+
+.ui.image.user-profile__image {
+  width: 45px;
+  height: 45px;
+}
+
+.user-profile__user-info {
+  margin-left: 20px;
+  flex: 2;
+}
+
+.ui.button.user-profile__edit-btn {
+  border-radius: 20px;
+  background: $gradient;
+  color: #FFF;
+}
+
+.user-profile__bio {
+  padding: 20px 0;
+}
+
+.user-profile__tabs > .ui.menu.pointing.secondary {
+  display: flex;
+  justify-content: space-between;
+
+  .item {
+    justify-content: center;
+    flex: 1;
+  }
+}
+
+.user-profile__tabs .ui.segment.tab {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  min-height: 50vh;
+}

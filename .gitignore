@@ -1,0 +1,6 @@
+ui-mocks/
+server/node_modules
+client/node_modules
+
+.env
+.DS_Store

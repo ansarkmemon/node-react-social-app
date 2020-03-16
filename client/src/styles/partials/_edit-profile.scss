@@ -1,0 +1,44 @@
+.edit-profile__page {
+  .ui.image.user-profile__image {
+    width: 70px;
+    border: 1px solid $dark-background;
+    padding: 3px;
+    height: 70px;
+  }
+}
+.edit-profile__image {
+  position: relative;
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #FFF; 
+  }
+  input#image {
+    display: none;
+  }
+}
+.ui.form {
+  margin-top: 50px;
+  .field {
+    .edit-profile__field {
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #666;
+      background: transparent;
+
+      &:focus {
+        background: transparent;
+        outline: none;
+      }
+    }
+  }
+}
+
+.ui.button.edit-profile__delete-btn {
+  margin-top: 50px;
+}
