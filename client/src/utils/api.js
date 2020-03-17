@@ -5,10 +5,4 @@ const request = axios.create({
   withCredentials: true,
 });
 
-
-// export const login = async () => {
-//   return 
-// }
-
-
 export default request;

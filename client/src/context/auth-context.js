@@ -27,7 +27,7 @@ const AuthProvider = (props) => {
 
   const handleUserStorage = (user = {}) => {
     if (_isEmpty(user)) {
-      Cookies.remove('auth_id');
+      // Cookies.remove('auth_id');
       setIsLoggedIn(false);
       setUser(user);
       window.localStorage.removeItem('user'); 
