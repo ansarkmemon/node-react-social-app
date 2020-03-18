@@ -11,7 +11,6 @@ exports.createBookmark = async (postId, userId) => {
 }
 
 exports.getBookmarksByUserId = async (userId) => {
-  console.log(userId)
   return await Bookmark.findAll({ 
     where: { userId },
     include: [{ 

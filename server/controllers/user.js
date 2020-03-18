@@ -17,8 +17,7 @@ exports.getUserByEmail = async (email) => {
 
 exports.signUpUser = async (userDetails) => {
   const { username, password, email } = userDetails;
-  const hashedPassword = password;
-  // const hashedPassword = await bcrypt.hash(password, 12);
+  const hashedPassword = await bcrypt.hash(password, 12);
  
   const userByUsername = await this.getUserByUsername(username);
   if (userByUsername) throw new Error('This username already exists');
@@ -50,8 +49,6 @@ exports.deleteUser = async userId => {
 
 exports.updateUser = async (userId, userDetails) => {
   const [ rowsAffected ] = await User.update({ ...userDetails }, { where: { userId } });
-  console.log({ ...userDetails });
-  // if (!rowsAffected) throw new Error('User with this id not found');
   return rowsAffected;
 }
 

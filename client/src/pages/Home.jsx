@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Button, Loader, Segment } from 'semantic-ui-react';
+import { Button, Loader } from 'semantic-ui-react';
 import _isEmpty from 'lodash/isEmpty';
 import Post from '../components/base/Post'
 import CreatePost from '../components/base/CreatePost';

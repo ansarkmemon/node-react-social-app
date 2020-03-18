@@ -31,7 +31,6 @@ router.post('/login', async (req, res) => {
     const user = await userController.getUserByUsername(req.body.username);
     res.cookie('auth_id', token).status(200).json(_omit(user.dataValues, ['password']));
   } catch (error) {
-    // throw new Error({"message": "yo"});
     res.status(400).json(error.message);
   } 
 });

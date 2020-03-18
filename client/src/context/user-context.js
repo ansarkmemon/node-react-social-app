@@ -5,7 +5,6 @@ const UserContext = React.createContext();
 
 const UserProvider = (props) => {
   const { user, isLoggedIn } = useAuth();
-  // console.log('user from user context ', user);
   return <UserContext.Provider value={{user, isLoggedIn}} {...props} />
 }
 

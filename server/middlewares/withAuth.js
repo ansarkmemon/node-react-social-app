@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const userController = require('../controllers/user');
 
 dotenv.config();
-const secret = process.env.SECRET;
+const secret = process.env.SECRET || 'SOME_SECRET';
 
 const auth = {
   verifyToken(req, res, next) {

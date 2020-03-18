@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Cookies from 'js-cookie';
 import api from '../utils/api';
 import _isEmpty from 'lodash/isEmpty';
@@ -9,25 +9,11 @@ const AuthProvider = (props) => {
   const [user, setUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  useEffect(() => {
-    if (Cookies.get('auth_id')) {
-      verifyToken();
-    }
-  }, [])
-
-  const verifyToken = async () => {
-    try {
-      const verifiedUser = await api.get('users/verify');  
-      handleUserStorage(verifiedUser.data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
   
 
   const handleUserStorage = (user = {}) => {
     if (_isEmpty(user)) {
-      // Cookies.remove('auth_id');
+      Cookies.remove('auth_id');
       setIsLoggedIn(false);
       setUser(user);
       window.localStorage.removeItem('user'); 

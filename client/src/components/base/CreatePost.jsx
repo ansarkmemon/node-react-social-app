@@ -1,6 +1,5 @@
 import React, { useState }  from 'react'
 import { Sidebar, Segment, Form, TextArea, Image, Header, Button, Icon } from 'semantic-ui-react';
-import api from '../../utils/api';
 import { useUser } from '../../context/user-context';
 import { getUserImage } from '../../utils/helpers';
 
@@ -23,7 +22,7 @@ const CreatePost = ({ isVisible, setIsVisible, createPost }) => {
     const { name, files } = event.target;
     const tempFileURL = URL.createObjectURL(files[0]);
     setTempImageURL(tempFileURL);
-    formData.append(name, files[0]);
+    formData.set(name, files[0]);
   }
 
   const removeImage = (event) => {

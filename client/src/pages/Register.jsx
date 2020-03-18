@@ -50,7 +50,6 @@ const Register = () => {
   const history = useHistory();
 
   const handleRegistration = async data => {
-    console.log(data)
     try {
       setIsLoading(true);
       await registerUser(data);

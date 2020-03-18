@@ -28,17 +28,7 @@ module.exports = (sequelize, Sequelize) => {
       allowNull: false,
       validate: { min: 6 }
     },
-  }, {
-    hooks: {
-      beforeCreate: (user) => {
-        const hash = bcrypt.hashSync(user.password, 12);
-        user.password = hash;
-      }
-    }
-  });
-
-  User.prototype.comparePassword = (user, password) => 
-    bcrypt.compareSync(password, user.password);
+  }, {});
 
   return User;
 }

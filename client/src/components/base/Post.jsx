@@ -8,7 +8,6 @@ const Post = ({ data, createBookmark }) => {
   const formattedPostDate = formatDistance(new Date(data.createdAt), new Date(), { addSuffix: true });
 
   const handleBookmark = () => {
-    console.log('bookmark')
     if (isBookMarked) {
       setBookMark(false);
       // Make api call to destroy bookmark
